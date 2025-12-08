@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap');
 
+:root {
+  --offwhite: #f8f8f4;
+  --darkgrey: #1c1c1c;
+}
 body {
   font-family: 'EB Garamond', Georgia, serif;
   margin: 0;
   padding: 2em 3em 10em;
-  background-color: #ffffff;
+  background-color:var(--offwhite);
 }
 
 h1,
@@ -31,27 +35,24 @@ p {
 .nyt-header {
   font-family: Georgia, serif;
   padding: 10px 20px 0;
-  position: sticky;
+
 }
 
 .nyt-title-row {
   text-align: center;
-  margin-bottom: 5px;
 }
 
 .nyt-title {
   font-size: 32px;
   font-weight: bold;
   font-family: 'UnifrakturMaguntia', Georgia, serif;
-  /* or your chosen blackletter */
   white-space: nowrap;
 }
 
 .nyt-info-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .nyt-date {
@@ -83,15 +84,14 @@ p {
 .title-section {
   text-align: center;
   max-width: 800px;
-  margin: -15px auto;
+  margin: 0px auto;
   padding: 40px 20px;
-  height: 70vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  padding-top: 15vh;
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.15s linear, transform 0.15s linear;
@@ -161,7 +161,7 @@ p {
 .scroll-line {
   position: relative;
   width: 2px;
-  height: 80px;
+  height: 50px;
   background-color: #000000;
   overflow: hidden;
 }
@@ -223,16 +223,15 @@ p {
 /* Tall container so we have room to scroll through all cards */
 .scrolly-wetbulb {
   position: relative;
-  height: 200vh;
-  /* adjust depending on how slow/long you want it */
+  height: 250vh;
 }
 
 .thermo-wrapper {
   position: sticky;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); /* center in viewport */
-  width: 100px;
+  transform: translate(-50%, -60%); /* center in viewport */
+  width: 200px;
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -245,10 +244,9 @@ p {
 
 .thermo-column {
   position: relative;
-  width: 40px;
-  height: 350px;
+  width: 70px;
+  height: 450px;
   border-radius: 999px;
-  /* background: #f0f0f0; */
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
@@ -267,9 +265,9 @@ p {
 }
 
 .thermo-bulb {
-  margin-top: -40px;
-  width: 80px;
-  height: 80px;
+  margin-top: -50px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background: #d22;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
@@ -284,8 +282,10 @@ p {
   max-width: 650px;
   padding: 32px 40px;
   background: #ffffff;
-  border-radius: 8px;
+  /* border-radius: 8px; */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   border: 1px solid #eee;
+  border-left: 4px solid #d22;
   font-family: 'EB Garamond', serif;
   font-size: 24px;
   line-height: 1.6;
@@ -296,6 +296,16 @@ p {
   z-index: 1;
 }
 
+.transition-section {
+  background: #ffffff;
+  /* border-radius: 8px; */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee;
+  border-left: 4px solid var(--darkgrey);
+  border-right: 4px solid var(--darkgrey);
+  padding: 4rem 2rem;
+  align-items: center;
+}
 .transition-section p {
   font-size: 24px;
 }
@@ -305,12 +315,14 @@ p {
   flex-direction: row;
   gap: 2rem;
   margin: 0 5rem 10rem;
+  /* margin: 0 auto; */
   /*top, right/left , bottom*/
-  padding: 0 2rem 2rem;
+  padding: 0 0 2rem 2rem;
   position: relative;
   z-index: 1;
   /* border-top: 1px solid #ddd;
   /*border-bottom: 1px solid #ddd; */
+  /* border: 1px solid slateblue */
 }
 
 /* ----- US Scrolly ----- */
@@ -488,27 +500,26 @@ p {
 /* ----------------- */
 #globe-section {
   color: white;
-  background-color: #1e202c;
+  background-color: var(--darkgrey);
   width: 80%;
   padding: 1rem 2rem;
   border-radius: 1rem;
   margin: 0 auto;
   text-align: center;
+  /* margin-top: 8rem; */
 }
 
 #globe-container {
   max-width: 800px;
   margin: 0 auto 2rem;
   padding: 0 1rem;
-  /* border: 1px solid red; */
 }
 
 #wetbulb-globe-wrapper {
-  height: 500px;      /* or 360–400, tweak to taste */
+  height: 500px;
   max-height: 500px;
   margin: 0 auto;
   position: relative;
-  /* border: 1px solid red; */
 }
 
 .globe-wrapper canvas,
@@ -540,7 +551,7 @@ p {
   border-radius: 4px;
   padding: 6px 8px;
   font-size: 12px;
-  color: #111827;
+  color: #111327;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   opacity: 0;
   transition: opacity 0.1s ease-out;
@@ -559,7 +570,7 @@ p {
   background: linear-gradient(
       to right,
       #9b1b0d var(--percent),  /* filled portion (blue) */
-      #2b3a50 var(--percent)   /* unfilled portion (gray) */
+      #32363a var(--percent)   /* unfilled portion (gray) */
   );
 }
 
@@ -599,7 +610,9 @@ p {
 /* The whole emissions section */
 #emissions {
   position: relative;
-  margin-top: 100px;
+  margin: 100px auto;
+  width: 85%;
+  /* border: 1px solid salmon ; */
 }
 
 /* Two-column scrollytelling layout */
@@ -609,6 +622,7 @@ p {
   gap: 40px;
   position: relative;
   min-height: 100vh; /* important */
+  
 }
 
 /* Left column: */
@@ -617,6 +631,7 @@ p {
   top: 80px;
   height: fit-content;
   flex: 1 1 50%;
+  /* border: 1px solid salmon ; */
 }
 
 /* Right column */
