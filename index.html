@@ -8,8 +8,13 @@
 
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+  <!-- your code -->
+  <script type="module" src="better_globe.js"></script>
   <script type="module" src="main.js"></script>
+
   <script type="module" src="script.js"></script> <!-- Emissions JS -->
+
 </head>
 
 <body>
@@ -244,17 +249,23 @@
     </div>
   </section>
 
-  <div id="globe-section">
+  <section id="globe-section">
     <h2>Where Heat Becomes Dangerous</h2>
     <p>
-      Use the globe to explore how wet-bulb temperatures rise across countries from year to year 
-      and see which regions approach levels that the human body can no longer survive.
+      Use the globe to explore how global wet-bulb temperatures are projected to rise. 
     </p>
 
-    <div id="globe-container"></div>
+    <div id="globe-container">
+    <div class="globe-wrapper" id="wetbulb-globe-wrapper"></div>
+    <div class="globe-controls">
+      <span>Year:</span>
+      <span id="wetbulb-year-label"></span>
+      <input id="wetbulb-year-slider" type="range" />
+    </div>
   </div>
+  </section>
 
-  
+
 
   <!-- <div class="write-up">
     <h2>Write Up:</h2>
@@ -294,4 +305,5 @@
     </p>
   </div> -->
 </body>
+
 </html>

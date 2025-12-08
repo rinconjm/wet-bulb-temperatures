@@ -541,11 +541,13 @@ document.addEventListener('scroll', () => {
 
 // Globe /////////////////////////////////////////
 
-const runtime = new Runtime();
+// const runtime = new Runtime();
 
-runtime.module(define, name =>
-  name === "map"
-    ? new Inspector(document.querySelector("#globe-container"))
-    : null
-);
+// runtime.module(define, name =>
+//   name === "map"
+//     ? new Inspector(document.querySelector("#globe-container"))
+//     : null
+// );
 
+
+// New Globe /////////////////////////////////////////
