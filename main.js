@@ -1,9 +1,6 @@
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7/+esm';
 import scrollama from 'https://cdn.jsdelivr.net/npm/scrollama@3.2.0/+esm';
 
-import define from './globe.js';
-import { Inspector, Runtime } from './runtime.js';
-
 const bins = [10, 14, 18, 22, 26, 30, 32];
 const colors = [
   '#FDFDFD',
@@ -659,16 +656,3 @@ document.addEventListener('scroll', () => {
     if (usMap) usMap.classList.add('sticky-hidden');
   }
 });
-
-// Globe /////////////////////////////////////////
-
-// const runtime = new Runtime();
-
-// runtime.module(define, name =>
-//   name === "map"
-//     ? new Inspector(document.querySelector("#globe-container"))
-//     : null
-// );
-
-
-// New Globe /////////////////////////////////////////
